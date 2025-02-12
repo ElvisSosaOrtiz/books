@@ -1,3 +1,7 @@
+using ServiceContracts;
+using Services;
+using Services.Constants;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -7,10 +11,12 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddHttpClient("ExternalApiClient", client =>
+builder.Services.AddHttpClient(HttpClientNames.ExternalApiClient, client =>
 {
     client.BaseAddress = new Uri(builder.Configuration.GetValue<string>("ExternalApiBaseUrl")!);
 });
+
+builder.Services.AddScoped<IBooksService, BooksService>();
 
 var app = builder.Build();
 
