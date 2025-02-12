@@ -18,6 +18,13 @@ builder.Services.AddHttpClient(HttpClientNames.ExternalApiClient, client =>
 
 builder.Services.AddScoped<IBooksService, BooksService>();
 
+builder.Services.AddCors(p => p.AddPolicy("policy", builder =>
+{
+    builder.AllowAnyOrigin()
+           .AllowAnyMethod()
+           .AllowAnyHeader();
+}));
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -28,6 +35,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors("policy");
 
 app.UseAuthorization();
 

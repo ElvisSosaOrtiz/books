@@ -40,6 +40,7 @@
 
                 return new()
                 {
+                    Count = books!.Count(),
                     Books = books!.Select(book => new ResponseOfGetBooks.Book
                     {
                         Id = book.Id,

@@ -28,16 +28,8 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/elvis/Desktop/Books/Books/Books/Pages/Counter.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/elvis/Desktop/Books/Books/Books/Pages/Home.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/elvis/Desktop/Books/Books/Books/Pages/Weather.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV2VhdGhlci5yYXpvcg==
+[C:/Users/elvis/Desktop/Books/Books/Books/Pages/BookList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va0xpc3QucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/elvis/Desktop/Books/Books/Books/_Imports.razor]
@@ -47,7 +39,3 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/elvis/Desktop/Books/Books/Books/Layout/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-620kjjc0t6
-
-[C:/Users/elvis/Desktop/Books/Books/Books/Layout/NavMenu.razor]
-build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE5hdk1lbnUucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = b-3x8669zv5z

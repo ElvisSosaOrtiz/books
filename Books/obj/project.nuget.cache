@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "+8Ch+W19w6w=",
+  "dgSpecHash": "jh/8Nc74xrU=",
   "success": true,
   "projectFilePath": "C:\\Users\\elvis\\Desktop\\Books\\Books\\Books\\Books.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\elvis\\.nuget\\packages\\dartsassbuilder\\1.1.0\\dartsassbuilder.1.1.0.nupkg.sha512",
     "C:\\Users\\elvis\\.nuget\\packages\\microsoft.aspnetcore.authorization\\8.0.12\\microsoft.aspnetcore.authorization.8.0.12.nupkg.sha512",
     "C:\\Users\\elvis\\.nuget\\packages\\microsoft.aspnetcore.components\\8.0.12\\microsoft.aspnetcore.components.8.0.12.nupkg.sha512",
     "C:\\Users\\elvis\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\8.0.12\\microsoft.aspnetcore.components.analyzers.8.0.12.nupkg.sha512",
@@ -30,7 +31,9 @@
     "C:\\Users\\elvis\\.nuget\\packages\\microsoft.jsinterop.webassembly\\8.0.12\\microsoft.jsinterop.webassembly.8.0.12.nupkg.sha512",
     "C:\\Users\\elvis\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.12\\microsoft.net.illink.tasks.8.0.12.nupkg.sha512",
     "C:\\Users\\elvis\\.nuget\\packages\\microsoft.net.sdk.webassembly.pack\\9.0.1\\microsoft.net.sdk.webassembly.pack.9.0.1.nupkg.sha512",
+    "C:\\Users\\elvis\\.nuget\\packages\\radzen.blazor\\5.9.8\\radzen.blazor.5.9.8.nupkg.sha512",
     "C:\\Users\\elvis\\.nuget\\packages\\system.io.pipelines\\8.0.0\\system.io.pipelines.8.0.0.nupkg.sha512",
+    "C:\\Users\\elvis\\.nuget\\packages\\system.linq.dynamic.core\\1.6.0.1\\system.linq.dynamic.core.1.6.0.1.nupkg.sha512",
     "C:\\Users\\elvis\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.12\\microsoft.netcore.app.runtime.mono.browser-wasm.8.0.12.nupkg.sha512"
   ],
   "logs": []

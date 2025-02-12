@@ -5,6 +5,7 @@
         public static readonly ResponseOfGetBooks Empty = new();
 
         public IEnumerable<Book> Books { get; set; } = [];
+        public int Count { get; set; }
 
         public class Book
         {

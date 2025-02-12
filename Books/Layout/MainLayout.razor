@@ -1,12 +1,10 @@
-﻿@inherits LayoutComponentBase
-<div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
+﻿@using Books.Routing
+@inherits LayoutComponentBase
 
+<div class="page">
     <main>
         <div class="top-row px-4">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+            <a class="fs-3 text-white fw-bold" href="/">Books</a>
         </div>
 
         <article class="content px-4">
@@ -14,3 +12,7 @@
         </article>
     </main>
 </div>
+<HeadContent>
+    <RadzenTheme Theme="material" />
+    <RadzenComponents />
+</HeadContent>
