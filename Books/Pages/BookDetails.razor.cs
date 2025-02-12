@@ -1,35 +1,26 @@
 ﻿namespace Books.Pages
 {
+    using Books.Routing;
     using Microsoft.AspNetCore.Components;
     using Microsoft.JSInterop;
-    using Radzen;
     using Shared.BooksController.Response;
     using Shared.Routing;
     using System.Net.Http.Json;
     using System.Threading.Tasks;
 
-    public partial class BookList
+    public partial class BookDetails
     {
         [Inject] private HttpClient HttpClient { get; set; } = null!;
         [Inject] private NavigationManager NavManager { get; set; } = null!;
         [Inject] private IJSRuntime JSRuntime { get; set; } = null!;
 
-        private ResponseOfGetBooks _response = new();
+        [Parameter] public int BookId { get; set; }
+
+        private ResponseOfGetBooks.Book _book = new();
 
         protected override async Task OnInitializedAsync()
         {
-            _response = await GetBooksAsync(1);
-        }
-
-        private async Task<ResponseOfGetBooks> GetBooksAsync(int pageNumber = 1, int pageSize = 10)
-        {
-            return await HttpClient.GetFromJsonAsync<ResponseOfGetBooks>(BooksControllerRoutes.GetBookPaginatedList(pageNumber, pageSize)) ?? ResponseOfGetBooks.Empty;
-        }
-
-        private async Task PageChangedAsync(PagerEventArgs args)
-        {
-            _response = await GetBooksAsync(args.PageIndex + 1, args.Top);
-            StateHasChanged();
+            _book = await HttpClient.GetFromJsonAsync<ResponseOfGetBooks.Book>(BooksControllerRoutes.ManageBook(BookId)) ?? new();
         }
 
         private async Task RemoveBookAsync(int id)
@@ -39,7 +30,7 @@
             {
                 await JSRuntime.InvokeVoidAsync("alert", $"Status Code: {response.StatusCode}. Book deleted successfully!");
             }
-            StateHasChanged();
+            NavManager.NavigateTo(ClientRoutes.BookList);
         }
     }
 }

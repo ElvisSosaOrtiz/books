@@ -28,6 +28,14 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/elvis/Desktop/Books/Books/Books/Pages/BookDetails.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va0RldGFpbHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/elvis/Desktop/Books/Books/Books/Pages/BookForm.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va0Zvcm0ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/elvis/Desktop/Books/Books/Books/Pages/BookList.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va0xpc3QucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 

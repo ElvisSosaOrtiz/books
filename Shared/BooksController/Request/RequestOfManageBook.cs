@@ -1,11 +1,22 @@
 ﻿namespace Shared.BooksController.Request
 {
+    using System.ComponentModel.DataAnnotations;
+
     public class RequestOfManageBook
     {
-        public required string Title { get; set; } = null!;
-        public required string Description { get; set; } = null!;
-        public required int PageCount { get; set; }
-        public required string Excerpt { get; set; } = null!;
+        [Required]
+        public string Title { get; set; } = null!;
+
+        [Required]
+        public string Description { get; set; } = null!;
+
+        [Required]
+        public int PageCount { get; set; }
+
+        [Required]
+        public string Excerpt { get; set; } = null!;
+
+        [Required]
         public DateTime PublishDate { get; set; }
     }
 }

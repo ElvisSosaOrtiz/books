@@ -1,0 +1,44 @@
+﻿@page "/book-form"
+@page "/book-form/{BookId:int}"
+@using Books.Routing
+
+@if (BookId != 0)
+{
+    <h1>Edit a Book</h1>
+}
+else
+{
+    <h1>Add a new Book</h1>
+}
+
+<EditForm Model="RequestOfManageBook" OnValidSubmit="SaveChangesAsync">
+    <DataAnnotationsValidator />
+    <ValidationSummary class="text-danger" role="alert" />
+    <div class="mb-3">
+        <label for="title" class="form-label">Title:</label>
+        <input id="title" @bind="RequestOfManageBook.Title" class="form-control" aria-required="true" />
+        <ValidationMessage For="() => RequestOfManageBook.Title" class="text-danger" />
+    </div>
+    <div class="mb-3">
+        <label for="description" class="form-label">Description:</label>
+        <input id="description" @bind="RequestOfManageBook.Description" class="form-control" aria-required="true" />
+        <ValidationMessage For="() => RequestOfManageBook.Description" class="text-danger" />
+    </div>
+    <div class="mb-3">
+        <label for="pagecount" class="form-label">Page count:</label>
+        <input id="pagecount" @bind="RequestOfManageBook.PageCount" class="form-control" aria-required="true" />
+        <ValidationMessage For="() => RequestOfManageBook.PageCount" class="text-danger" />
+    </div>
+    <div class="mb-3">
+        <label for="excerpt" class="form-label">Excerpt:</label>
+        <input id="excerpt" @bind="RequestOfManageBook.Excerpt" class="form-control" aria-required="true" />
+        <ValidationMessage For="() => RequestOfManageBook.Excerpt" class="text-danger" />
+    </div>
+    <div class="mb-3">
+        <label for="publishdate" class="form-label">Publish date:</label>
+        <input id="publishdate" @bind="RequestOfManageBook.PublishDate" class="form-control" aria-required="true" />
+        <ValidationMessage For="() => RequestOfManageBook.PublishDate" class="text-danger" />
+    </div>
+    <button class="btn btn-outline-primary" @onclick="_ => NavManager.NavigateTo(ClientRoutes.BookList)">Cancel</button>
+    <button class="btn btn-primary" type="submit">Save</button>
+</EditForm>

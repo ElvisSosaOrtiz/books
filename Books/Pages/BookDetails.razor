@@ -1,0 +1,21 @@
+﻿@page "/book-details/{BookId:int}"
+@using Books.Routing
+
+<div class="d-flex justify-content-between">
+    <h1>Book Details</h1>
+    <div>
+        <button class="btn btn-primary" @onclick="_ => NavManager.NavigateTo(ClientRoutes.BookList)">Return to List</button>
+        <button class="btn btn-warning" @onclick="_ => NavManager.NavigateTo(ClientRoutes.EditBook(BookId))">Edit this Book</button>
+        <button class="btn btn-danger" @onclick="_ => RemoveBookAsync(BookId)">Delete this Book</button>
+    </div>
+</div>
+
+<p><b>Title</b>: @_book.Title</p>
+<br />
+<p><b>Description</b>: @_book.Description</p>
+<br />
+<p><b>Page count</b>: @_book.PageCount</p>
+<br />
+<p><b>Excerpt</b>: @_book.Excerpt</p>
+<br />
+<p><b>Publish date</b>: @_book.PublishDate.ToLongDateString()</p>
