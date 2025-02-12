@@ -103,9 +103,7 @@
                     return null;
                 }
 
-                var book = await response.Content.ReadFromJsonAsync<BookModel>();
-
-                if (book is null || book.Title != request.Title) return new();
+                var book = (await response.Content.ReadFromJsonAsync<BookModel>())!;
 
                 return new()
                 {
