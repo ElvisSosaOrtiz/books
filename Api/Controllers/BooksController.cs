@@ -30,7 +30,7 @@
             return Ok(result);
         }
 
-        [HttpGet("/{id}")]
+        [HttpGet("{id}")]
         public async Task<IActionResult> GetBookDetails(int id)
         {
             var result = await _booksService.GetBookDetailsAsync(id);
@@ -50,7 +50,7 @@
             return Ok(result);
         }
 
-        [HttpPut("/{id}")]
+        [HttpPut("{id}")]
         public async Task<IActionResult> EditBook(int id, [FromBody] RequestOfManageBook request)
         {
             var result = await _booksService.EditBookAsync(id, request);
@@ -60,7 +60,7 @@
             return Ok(result);
         }
 
-        [HttpDelete("/{id}")]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> RemoveBook(int id)
         {
             await _booksService.RemoveBookAsync(id);
